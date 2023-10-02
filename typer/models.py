@@ -12,6 +12,7 @@ class Level(models.Model):
 
 class KeyBoardLayout(models.Model):
     language = models.CharField(max_length=200, choices=[('EN', 'English'), ('RU', "Russian")])
+    image_viewbox = models.CharField(max_length=200)
 
     def __str__(self) -> str:
         return f'{self.language}'
