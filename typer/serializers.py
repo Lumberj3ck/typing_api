@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Level, Difficulty
+from .models import Level, Difficulty, KeyBoardLayout
 
 
 class LevelSerializer(serializers.ModelSerializer):
@@ -11,4 +11,9 @@ class LevelSerializer(serializers.ModelSerializer):
 class DifficultySerializer(serializers.ModelSerializer):
     class Meta:
         model = Difficulty 
+        fields = '__all__'
+
+class Keyboard_layout_Serializer(serializers.ModelSerializer):
+    class Meta:
+        model = KeyBoardLayout 
         fields = '__all__'
